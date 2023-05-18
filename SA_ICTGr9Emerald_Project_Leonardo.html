@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<title>Q4 | Project</title>
+</head>
+<style type="text/css">
+	body{
+		background-color: #5e412f;
+		font-family: 'Bebas Neue', sans-serif;
+	}
+	.container{
+		padding: 20px;
+		border-radius: 25px;
+			margin: auto;
+			margin-top: 150px;
+		width: 600	px;
+	}
+	input{
+		margin: auto;
+		align-content: center;
+	}
+	select{
+		align-content: center;
+	}
+	div{
+		background-color: #fcebb7;
+	}
+
+
+</style>
+<body>
+	<div class="container"> 
+<h1 align="center" style="color: #f0771a;">Unit Converter</h1>
+<br>
+<h2 style="color:#f0a830;">Select Measurement</h2>
+                  <select align="center" class="form-control form-control-sm" style="margin-top: 3px; width: 700px;" >
+  			<option>Length</option>
+  		</select>
+<br>
+<div class="row"> 
+	<div class="column" style="margin:auto;">
+<h2 style="color:#79c1a9;">Desired Value</h2>
+  			            <input type="number" class="form-control" name="devalue" placeholder="Input your Number">
+</div>
+<div class="column" style="margin:auto;">
+  			<h2 style="color:#79c1a9;">converted value</h2>
+  			<input type="number" class="form-control" name="output" disabled>
+  			</div>
+
+
+
+</div>
+<div style="margin-top: 20px;">
+	<div class="row"> 
+		<div class="column" style="margin:auto;">
+<button class="btn" onclick="centimeter()" style="background-color: #79c1a9; color: #5e412f;">Convert to Centimeters</button>
+</div>
+<div class="column" style="margin:auto;">
+<button class="btn" onclick="meter()" style="background-color: #79c1a9; color: #5e412f;">Convert to Meters</button>
+</div>
+<div class="column" style="margin:auto;">
+<button class="btn" onclick="kilometer()" style="background-color: #79c1a9; color: #5e412f;">Convert to Kilometers</button>
+</div>
+</div>
+</div>
+<script>
+function centimeter() {
+    
+    var dev = document.getElementsByName('devalue')[0].value;
+
+    var quo = parseFloat(dev) / 10 ;
+    
+    document.getElementsByName('output')[0].value= quo;
+
+}
+
+function meter() {
+    
+    var dev = document.getElementsByName('devalue')[0].value;
+
+    var quo = parseFloat(dev) / 1000 ;
+    
+    document.getElementsByName('output')[0].value= quo;
+
+}
+
+function kilometer() {
+    
+    var dev = document.getElementsByName('devalue')[0].value;
+
+    var quo = parseFloat(dev) / 1000000 ;
+    
+    document.getElementsByName('output')[0].value= quo;
+
+}
+</script>
+</body>
+</html>
